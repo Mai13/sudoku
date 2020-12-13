@@ -33,9 +33,9 @@ class CheckSudoku:
 
         # matrix_3x3 = [solution[3 * i:3 * i + 3] for i in range(3)]
         # matrix_3x3 = [solution[3 * i:3 * i + 3] for i in range(3)]
-        solution
-        print(solution[0:])
-        print(mats_3x3x9)
+        print(solution)
+        matrix_3x3 = [solution[3 * i:3 * i + 3, 3 * i:3 * i + 3] for i in range(3)]
+        print(matrix_3x3)
 
     def is_correct(self, proposed_solution):
         print(self.__row_constraint(proposed_solution))
