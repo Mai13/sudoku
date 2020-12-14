@@ -3,7 +3,7 @@ import sys
 import logging
 from logging.handlers import RotatingFileHandler
 
-LOG_FILENAME = 'sudoku_solver.log' # log filename
+LOG_FILENAME = 'sudoku_solver.log'  # log filename
 
 
 def create_logger(path, level=logging.INFO):
