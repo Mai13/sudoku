@@ -1,4 +1,6 @@
 import numpy as np
+import logging
+logger = logging.getLogger('Brute Force')
 
 
 class BruteForce:
@@ -34,4 +36,3 @@ class BruteForce:
                                                             row,
                                                             column):
                             candidate_numbers.remove(candidate_number)
-                print(candidate_number, row, column)
