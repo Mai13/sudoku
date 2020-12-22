@@ -26,6 +26,8 @@ class BruteForce:
 
     def run(self):
         current_grid = self.grid.copy()
+        possibilities = []
+        ###### GRID OF POSSIBILITIES ######
         for row in range(self.grid.shape[0]):
             for column in range(self.grid.shape[1]):
                 if self.grid[row][column] == 0:
@@ -36,3 +38,9 @@ class BruteForce:
                                                             row,
                                                             column):
                             candidate_numbers.remove(candidate_number)
+                    possibilities.append([candidate_numbers, row, column])
+        print(len(possibilities))
+        ###### EXPLOID DE GRID ######
+        # candidate of numbers
+        # remove the using candidate
+        #
