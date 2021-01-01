@@ -2,6 +2,10 @@ import numpy as np
 import pygad
 
 
+"""
+This approximation is done with the library pygad
+"""
+
 class GeneticAlgorithm:
 
     def __init__(self):
@@ -33,7 +37,7 @@ class GeneticAlgorithm:
         pass
 
     def __fitness_function(self, solution):
-        pass
+        print(solution)
 
     def run(self, sudoku):
 
@@ -45,8 +49,8 @@ class GeneticAlgorithm:
         sol_per_pop = 8
         num_genes = len(self.__create_grid(sudoku)[0])
 
-        init_range_low = -2
-        init_range_high = 5
+        init_range_low = 1
+        init_range_high = 9
 
         parent_selection_type = "sss"
         keep_parents = 1
