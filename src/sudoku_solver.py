@@ -21,7 +21,7 @@ class SudokuSolver:
         logger.info(f'Out of {(9 * 9) ** 9} possibilities this sudoku has {(9 * 9 - np.where(initial_matrix.flatten() == 0)[0].shape[0]) ** 9}')
         logger.info(f'Thd number of filled number is {np.where(initial_matrix.flatten() == 0)[0].shape[0]} out of {9*9}')
         # BruteForce(initial_matrix).run()
-        SolveItLikeAHuman().run(initial_matrix)
+        is_feasible, candidate_solution = SolveItLikeAHuman().run(initial_matrix)
         # GeneticAlgorithm().run(initial_matrix)
         self.sudoku_checker.is_correct(solution)  # TODO: Check when is a good idea to use a @staticmethod
-        self.sudoku_checker.is_equal(solution, solution)
+        self.sudoku_checker.is_equal(candidate_solution, solution)
